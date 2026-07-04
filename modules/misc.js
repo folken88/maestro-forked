@@ -88,10 +88,17 @@ export class MaestroConfigForm extends FormApplication {
  */
 function _addPlaylistLoopToggle(html) {
     if (!game.user.isGM) return;
-    
-    const playlistModeButtons = html.find('[data-action="playlist-mode"]');
-    const loopToggleHtml = 
-        `<a class="sound-control" data-action="playlist-loop" title="${game.i18n.localize("MAESTRO.PLAYLIST-LOOP.ButtonTooltipLoop")}">
+
+    // v12 and earlier used data-action="playlist-mode"; v13+ uses "playlistMode"
+    const playlistModeButtons = html.find('[data-action="playlist-mode"], [data-action="playlistMode"]');
+    if (!playlistModeButtons.length) return;
+
+    // Match the surrounding markup: v13+ mode controls are icon <button>s, older versions <a><i></i></a>
+    const isButtonUi = playlistModeButtons.is("button");
+    const loopTooltip = game.i18n.localize("MAESTRO.PLAYLIST-LOOP.ButtonTooltipLoop");
+    const loopToggleHtml = isButtonUi
+        ? `<button type="button" class="inline-control sound-control icon fa-solid fa-sync" data-action="playlist-loop" data-tooltip aria-label="${loopTooltip}" title="${loopTooltip}"></button>`
+        : `<a class="sound-control" data-action="playlist-loop" title="${loopTooltip}">
             <i class="fas fa-sync"></i>
         </a>`;
 
@@ -112,7 +119,8 @@ function _addPlaylistLoopToggle(html) {
         const buttonTitle = button.getAttribute("title");
 
         const playlistDiv = button.closest(".document");
-        const playlistId = playlistDiv.getAttribute("data-document-id");
+        // v13+ identifies directory entries with data-entry-id; older versions used data-document-id
+        const playlistId = playlistDiv.getAttribute("data-entry-id") ?? playlistDiv.getAttribute("data-document-id");
         const playlist = game.playlists.get(playlistId);
 
         const loop = playlist.getFlag(MAESTRO.MODULE_NAME, MAESTRO.DEFAULT_CONFIG.PlaylistLoop.flagNames.loop);
@@ -135,7 +143,7 @@ function _addPlaylistLoopToggle(html) {
         }
 
         const playlistDiv = button.closest(".document");
-        const playlistId = playlistDiv.getAttribute("data-document-id");
+        const playlistId = playlistDiv.getAttribute("data-entry-id") ?? playlistDiv.getAttribute("data-document-id");
 
         if (!playlistId) {
             return;

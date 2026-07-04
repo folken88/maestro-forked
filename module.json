@@ -12,7 +12,11 @@
       "reddit": "u/etherboy12"
     }
   ],
-  "version":"0.9.0",
+  "version":"0.9.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "14"
+  },
   "minimumCoreVersion":"10.278",
   "compatibleCoreVersion":"10.278",
   "esmodules":["./maestro.js"],

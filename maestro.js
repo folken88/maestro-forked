@@ -182,7 +182,8 @@ export default class Conductor {
      */
     static _hookOnRenderPlaylistDirectory() {
         Hooks.on("renderPlaylistDirectory", (app, html, data) => {
-            Misc._onRenderPlaylistDirectory(app, html, data);
+            // Foundry v13+ renders the sidebar with ApplicationV2, which passes an HTMLElement
+            Misc._onRenderPlaylistDirectory(app, html instanceof jQuery ? html : $(html), data);
         });
     }
 
@@ -191,7 +192,8 @@ export default class Conductor {
      */
     static _hookOnRenderCombatTrackerConfig() {
         Hooks.on("renderCombatTrackerConfig", (app, html, data) => {
-            CombatTrack._onRenderCombatTrackerConfig(app, html, data);
+            // Foundry v13+ renders this config with ApplicationV2, which passes an HTMLElement
+            CombatTrack._onRenderCombatTrackerConfig(app, html instanceof jQuery ? html : $(html), data);
         });
     }
 
