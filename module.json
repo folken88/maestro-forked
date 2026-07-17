@@ -1,7 +1,7 @@
 {
   "id":"maestro",
   "name":"maestro",
-  "title":"Maestro",
+  "title":"Maestro (Forked)",
   "description":"Adds new sound-related features such as Hype Tracks and Item Tracks",
   "author":"Evan Clarke (errational#2007)",
   "authors": [
@@ -13,7 +13,7 @@
       "reddit": "u/etherboy12"
     }
   ],
-  "version":"0.9.3",
+  "version":"0.9.4",
   "compatibility": {
     "minimum": "10",
     "verified": "14"
