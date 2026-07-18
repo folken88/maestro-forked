@@ -138,6 +138,12 @@ export const SETTINGS_KEYS = {
         }
     },
 
+    get PlaylistImport() {
+        return {
+            enable: "enablePlaylistImport"
+        }
+    },
+
     get Misc() {
         return {
             disableDiceSound: "disableDiceSound",

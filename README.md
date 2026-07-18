@@ -19,7 +19,14 @@ Adds some sound-focused features to Foundry Virtual Tabletop!
 * **Hype Track** - Set a track to play each time that Actor has a turn in Combat
 * **Item Track** - Set a track to play when that Item is rolled
 * **Combat Track** - Set a playlist or track to play when the Combat encounter begins
+* **Folder Import** *(Folken fork)* - Import an entire folder of music into a playlist in one click, with best-guess track names
 * **Miscellaneous** - Playlist loop toggling, disable dice sound setting, critical/failure sounds
+
+---
+### Folder Import (Folken fork addition)
+GMs get an **Import Folder** button at the bottom of the Playlists sidebar. Click it, pick a music folder, and every audio file in that folder — and, recursively, in all of its subfolders — is added to a single playlist. Each track is given a best-guess friendly name derived from its filename (extension and leading track numbers stripped, `_`/`-` turned into spaces, `camelCase` split, Title Cased), e.g. `03_the_dark_forest-ambient.mp3` → *"The Dark Forest Ambient"*. A confirm dialog lets you name the new playlist or pour the files into an existing one, and reports how many files were found. Toggle the button off via **Enable Folder Import Button** in the module settings. (Supported audio: aac, flac, m4a, mid, mp3, ogg, opus, wav, webm.)
+
+---
 
 * **DEPRECATED Scene Playlist** - DEPRECATED -- Use native Foundry functionality instead ~~Select a playlist to play automatically when the Scene is activated~~.
 

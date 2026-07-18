@@ -167,6 +167,20 @@ export const registerModuleSettings = async function() {
     }),
 
     /* -------------------------------------------- */
+    /*               Playlist Import                */
+    /* -------------------------------------------- */
+
+    game.settings.register(MAESTRO.MODULE_NAME, MAESTRO.SETTINGS_KEYS.PlaylistImport.enable, {
+        name: "MAESTRO.SETTINGS.PlaylistImportEnableN",
+        hint: "MAESTRO.SETTINGS.PlaylistImportEnableH",
+        scope: "world",
+        type: Boolean,
+        default: true,
+        config: true,
+        onChange: s => {}
+    }),
+
+    /* -------------------------------------------- */
     /*                     Misc                     */
     /* -------------------------------------------- */
 

@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.5] - 2026-07-18 (Folken fork)
+### Added
+- **Folder Import**: an "Import Folder" button in the Playlists sidebar (GM only). Pick a music folder and every audio file in it and its subfolders is imported into one playlist, with best-guess friendly track names ported from the abandoned `playlist_import` module. Choose a new or existing target playlist; toggle via the new *Enable Folder Import Button* setting (default on).
+
+## [0.9.4] - 2026-07-17 (Folken fork)
+### Changed
+- Display title set to **Maestro (Forked)** to distinguish this fork in Module Management (id unchanged).
+
+## [0.9.3] - 2026-07-16 (Folken fork)
+### Fixed
+- Manifest modernized (added `id`, dropped legacy v10 core-version fields) and manifest/download/url repointed to `folken88/maestro-forked` so updates no longer pull the dead upstream. v13/v14 AppV2 sidebar compatibility (jQuery-wrap + new `data-action`/`data-entry-id` selectors).
+
 ## Known Issues
 1. ~~Critical Sounds do not play when roll made with advantage/disadvantage~~ (resolved in 0.9.0)
 2. Critical Sounds ~~do~~ may not play with modules such as BetterRolls5e (possibly resolved in 0.7.6)

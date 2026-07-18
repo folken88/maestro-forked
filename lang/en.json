@@ -4,6 +4,23 @@
 
         "MODULE_LABEL": "Maestro",
 
+        "SETTINGS.PlaylistImportEnableN": "Enable Folder Import Button",
+        "SETTINGS.PlaylistImportEnableH": "Adds an 'Import Folder' button to the Playlists sidebar that imports every audio file in a chosen folder (and its subfolders) into one playlist, auto-naming each track.",
+
+        "PLAYLIST-IMPORT.ButtonText": "Import Folder",
+        "PLAYLIST-IMPORT.PickerTitle": "Choose a music folder to import",
+        "PLAYLIST-IMPORT.DialogTitle": "Import Folder to Playlist",
+        "PLAYLIST-IMPORT.Scanning": "Scanning folder for audio files…",
+        "PLAYLIST-IMPORT.NoFiles": "No audio files found in that folder.",
+        "PLAYLIST-IMPORT.FoundFiles": "Found <b>{count}</b> audio file(s) across {folders} folder(s) in <code>{folder}</code>.",
+        "PLAYLIST-IMPORT.Target": "Add to",
+        "PLAYLIST-IMPORT.NewPlaylist": "＋ New playlist",
+        "PLAYLIST-IMPORT.PlaylistName": "New playlist name",
+        "PLAYLIST-IMPORT.ImportButton": "Import",
+        "PLAYLIST-IMPORT.Cancel": "Cancel",
+        "PLAYLIST-IMPORT.Done": "Imported {added} track(s) into '{playlist}'. ({skipped} already present, skipped.)",
+        "PLAYLIST-IMPORT.Failed": "Folder import failed — see the console (F12) for details.",
+
         "SETTINGS.HypeTrackEnableN": "Enable Hype Track",
         "SETTINGS.HypeTrackEnableH": "Enable the ability to set a Track for an Actor",
         "SETTINGS.HypeTrackPauseOthersN": "Pause Other Playlist Sounds (Hype Track)",
